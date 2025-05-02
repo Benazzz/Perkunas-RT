@@ -1,0 +1,42 @@
+---
+import LayoutEn from "../../layouts/Layout_En.astro";
+import "../../styles/style.css"
+import Team from "../../assets/TeamFromDrone.png"
+import "../../styles/index.css"
+import GIF from "../../assets/CarDriving.gif"
+import Ansys from "../../assets/sponsors/ansys.png"
+---
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Perkunas RT</title>
+    </head>
+    <body>
+        <LayoutEn>
+            <img src={Team.src} alt="Team" width="100%" class="TeamImg">
+            <div class="b-block">
+                <div class="container about-us">
+                    <div class="about-text">
+                        <h1>The Speed of the Future</h1>
+                        <p>We are not only designing a car, but also creating a vision of the future</p>                        
+                    </div>
+                    <div class="image">
+                        <img src={GIF.src} alt="Važiuojantis automobilis" width="500px" class="gif">
+                    </div>
+                </div>
+            </div>
+            <div class="b-w">
+
+            </div>
+            <div class="w-block">
+                <div class="container sponsors">
+                    <h1>Our Sponsors</h1>
+                    <div>
+                        <img src={Ansys.src} alt="Ansys" height="150px">
+                    </div>
+                </div>
+            </div>
+        </LayoutEn>
+    </body>
+</html>

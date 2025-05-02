@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.b-block {
+    background-color: #000000;
+    color: #ffffff
+}
+
+.y-block {
+    background-color: #ffff00;
+    color: #000000;
+}
+
+.w.block {
+    background-color: #ffffff;
+    color: #000000;
+}

@@ -1,0 +1,43 @@
+.TeamImg {
+    object-fit: cover;
+    display: block;
+}
+
+.about-us {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
+}
+
+.image {
+    border: 10px solid #ffff00;
+    margin: 50px;
+}
+
+.about-text {
+    margin: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-text > h1 {
+    font-size: 60px;
+}
+
+.about-text > p {
+    font-size: 30px;
+    font-weight: 400;
+    padding-top: 20px;
+}
+
+.sponsors {
+    text-align: center;
+    padding: 50px;
+}
+
+.sponsors > h1 {
+    margin-bottom: 100px;
+    font-size: 60px;
+}
