@@ -1,0 +1,50 @@
+.card {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px 20px;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.GPM {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.GPM, .support {
+    width: 45%;
+}
+
+.pdf {
+    text-decoration: underline;
+    color: #000000;
+}
+
+.pdf:hover {
+    color: #555555
+}
+
+.support > p {
+    padding-bottom: 20px;
+}
+
+.donate {
+    display: flex;
+    justify-content: space-around;
+}
+
+.donate > a {
+    margin: 0px;
+}

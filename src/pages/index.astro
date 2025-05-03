@@ -1,42 +1,46 @@
 ---
 import LayoutLt from "../layouts/Layout_Lt.astro";
-import "../styles/style.css"
-import Team from "../assets/TeamFromDrone.png"
-import "../styles/index.css"
-import GIF from "../assets/CarDriving.gif"
-import Ansys from "../assets/sponsors/ansys.png"
+import "../styles/style.css";
+import Team from "../assets/TeamFromDrone.png";
+import "../styles/index.css";
+import GIF from "../assets/CarDriving.gif";
+import Ansys from "../assets/sponsors/ansys.png";
 ---
-<html lang="lt">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>Perkūnas RT</title>
-    </head>
-    <body>
-        <LayoutLt>
-            <img src={Team.src} alt="Komanda" width="100%" class="TeamImg">
-            <div class="b-block">
-                <div class="container about-us">
-                    <div class="about-text">
-                        <h1>Ateities Greitis</h1>
-                        <p>Projektuojame ne tik automobilį, bet ir kuriame ateities viziją</p>
-                    </div>
-                    <div class="image">
-                        <img src={GIF.src} alt="Važiuojantis automobilis" width="500px" class="gif">
-                    </div>
-                </div>
-            </div>
-            <div class="b-w">
 
-            </div>
-            <div class="w-block">
-                <div class="container sponsors">
-                    <h1>Mūsų Partneriai</h1>
-                    <div>
-                        <img src={Ansys.src} alt="Ansys" height="150px">
-                    </div>
-                </div>
-            </div>
-        </LayoutLt>
-    </body>
-</html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Perkūnas RT</title>
+</head>
+<body>
+  <LayoutLt>
+    <img src={Team.src} alt="Komanda" width="100%" class="TeamImg first" />
+    <div class="b-block">
+      <div class="container slogan">
+        <div class="slogan-text">
+          <h1>Ateities Greitis</h1>
+          <p class="first-p">
+            Projektuojame ne tik automobilį, bet ir kuriame ateities viziją
+          </p>
+        </div>
+        <div class="slogan-image">
+          <img
+            src={GIF.src}
+            alt="Važiuojantis automobilis"
+            width="500px"
+            class="image-y"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="b-w"></div>
+    <div class="w-block">
+      <div class="container sponsors">
+        <h1>Mūsų Partneriai</h1>
+        <div>
+          <img src={Ansys.src} alt="Ansys" height="150px" />
+        </div>
+      </div>
+    </div>
+  </LayoutLt>
+</body>

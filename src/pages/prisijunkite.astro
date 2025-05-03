@@ -1,26 +1,68 @@
 ---
 import LayoutLt from "../layouts/Layout_Lt.astro";
-import "../styles/style.css"
+import "../styles/style.css";
+import "../styles/join-us.css";
+import Team from "../assets/Team.png";
 ---
+
 <html lang="lt">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>Perkūnas RT | Prisijunkite</title>
-    </head>
-    <body>
-        <LayoutLt>
-            <div class="y-block">
-                <div class="container">
-                    <div>
-                        <div>
-                            <div>Info about recruitment</div>
-                            <div>Team Image</div>
-                        </div>
-                        <div>Benefits for students</div>
-                    </div>
-                </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Perkūnas RT | Prisijunkite</title>
+  </head>
+  <body>
+    <LayoutLt>
+      <div class="y-block first">
+        <div class="container join-us">
+          <div class="to-join">
+            <div>
+              <h1>Norite prisijungti?</h1>
+              <p class="first-p">
+                Norėdami prisijungti spauskite žemiau esantį mygtuką ir
+                užpildykite formą. Naujų narių ieškome rugsėjo ir vasario
+                mėnesiais, tačiau jei turite patirties inžinerijos, verslo
+                srityse ar net „Formula Student" varžybose - į tai
+                atsižvelgsime.
+              </p>
+              <a class="button b-block" href="https://docs.google.com/forms/d/e/1FAIpQLSdwLiYJsdeDij5YE5FDXWvOn8sIecHKf9AITatkuBPsYKg6zQ/viewform" target="_blank">PRISIJUNGTI</a>
             </div>
-        </LayoutLt>
-    </body>
+            <div>
+                <img src={Team.src} alt="Komanda" width="100%" class="image-b">
+            </div>
+          </div>
+          <div class="join-info">
+            <h1>Ką gausite prisijungę?</h1>
+            <p class="first-p">
+              Mes suteikiame studentams galimybe įgyti praktinės patirties
+              inžinerijoje, dizaine ir gamyboje, tuo pačiu lavinti svarbius
+              minkštuosius įgūdžius, būtinus profesinei sėkmei.
+            </p>
+            <ul>
+              <li class="first-p">
+                Įgysite praktinės patirties kuriant, projektuojant ir testuojant
+                aukštos kokybės transporto priemonę.
+              </li>
+              <li>
+                Dirbant su remėjais ir atstovaujant komandą išmoksite apie
+                verslą, marketiną ir projektų valdymą.
+              </li>
+              <li>
+                Vystysite komandinio darbo, lyderystės ir laiko valdymo įgūdžius
+                bendradarbiaujančioje aplinkoje.
+              </li>
+              <li>
+                Sukursite ryšius su universiteto dėstytojais ir pramonės
+                partneriais, plečiant profesinį tinklą.
+              </li>
+              <li>
+                Įgysite vertingų žinių ir įgūdžių, kurie padės pasiruošti
+                būsimiems inžinerijos ir verslo iššūkiems.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </LayoutLt>
+  </body>
 </html>

@@ -1,51 +1,114 @@
 ---
 import LayoutLt from "../layouts/Layout_Lt.astro";
-import "../styles/style.css"
+import "../styles/style.css";
+import CarInSun from "../assets/CarInSun.png";
+import CarInGarage from "../assets/CarInGarage.png";
+import Competition from "../assets/Competition.png";
+import "../styles/about-us.css";
 ---
+
 <html lang="lt">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>Perkūnas RT | Apie Mus</title>
-    </head>
-    <body>
-        <LayoutLt>
-            <div class="y-block">
-                <div class="container">
-                    <div>
-                        About Us
-                    </div>
-                    <div>
-                        CarInSun
-                    </div>
-                </div>
-            </div>
-            <div class="y-b">
-
-            </div>
-            <div class="b-block">
-                <div class="container">
-                    <div>
-                        CarInGarage
-                    </div>
-                    <div>
-                        Mission
-                    </div>
-                </div>
-            </div>
-            <div class="b-w">
-
-            </div>
-            <div class="w-block">
-                <div class="container">
-                    <div>
-                        Competition
-                    </div>
-                    <div>
-                        FormulaStudent
-                    </div>
-                </div>
-            </div>
-        </LayoutLt>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Perkūnas RT | Apie Mus</title>
+  </head>
+  <body>
+    <LayoutLt>
+      <div class="y-block first">
+        <div class="container about-us">
+          <div class="text">
+            <h1>Apie Mus</h1>
+            <p class="first-p">
+              Mes esame ambicinga studentų komanda, kurianti lenktyninį
+              automobilį „Formula student" varžyboms. Mūsų veikla apima visą
+              kūrimo procesą - nuo komandos formavimo, dizaino ir prototipo
+              kūrimo iki gamybos ir pasiruošimo tarptautiniam konkursui.
+            </p>
+            <p>
+              Projektuodami transporto priemonę orientuojamės į elektrinių
+              automobilių (EV) technologijas. Siekiame ne tik sukurti
+              konkurencingą automobilį, bet ir suteikti studentams realią
+              galimybę pritaikyti studijų metu įgytas žinias praktikoje -
+              inžinerijoje, versle, projektų valdyme.
+            </p>
+            <p>
+              Mūsų komandoje skatinamas bendradarbiavimas, atsakomybė ir
+              lyderystė - tai vertybės, kurios padeda augti kiekvienam nariui, o
+              kartu - pasiekti ambicingų tikslų.
+            </p>
+          </div>
+          <div class="image">
+            <img
+              src={CarInSun.src}
+              alt="Automobilis saulėje"
+              width="400px"
+              class="image-b"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="y-b"></div>
+      <div class="b-block">
+        <div class="container mission">
+          <div class="image">
+            <img
+              src={CarInGarage.src}
+              alt="Automobilis garaže"
+              width="400px"
+              class="image-y"
+            />
+          </div>
+          <div class="text">
+            <h1>Misija</h1>
+            <p class="first-p">
+              Mes ugdome ateities lyderius inžinerijos, technologijų ir verslo
+              srityse, suteikiant jiems vietą, kurioje teorinės žinios virsta
+              realiais sprendimais. Dirbdami kaip vieninga komanda, mes ne tik
+              kuriame automobilį, bet ir formuojame tvarią mokymosi aplinką,
+              kurioje vystomi komunikacijos ir problemų sprendimo įgūdžiai.
+            </p>
+            <p>
+              Esame pasiryžę skatinti tobulėjimą, kurti stiprias partnerystes su
+              pramone ir plėsti studentų motorinio sporto ribas, prisidedant
+              prie pažangos ir inovacijų Lietuvoje bei tarptautinėje rinkoje.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="b-w"></div>
+      <div class="w-block">
+        <div class="container competition">
+          <div class="text">
+            <h1>Varžybos</h1>
+            <p class="first-p">
+              „Formula Student" yra viena iš prestižiškiausių inžinerijos
+              varžybų pasaulyje, kuriose susirenka universitetų studentų
+              inžinieriai iš viso pasaulio, kad parodytų savo projektavimo,
+              gamybos, testavimo ir projektų valdymo įgūdžius.
+            </p>
+            <p>
+              Varžybos išbando komandas tiek trasoje, tiek už jos ribų. Komandos
+              privalo pristatyti pilną verslo planą, įskaitant marketingo
+              planus, gamybos galimybes ir sąnaudų analizę, imituodamos tikro
+              pasaulio produkto pristatymą
+            </p>
+            <p>
+              Sėkmė priklauso nuo kūrybiškumo, techninio meistriškumo, inovacijų
+              ir komandinio darbo, todėl „Formula Student" yra tikras išbandymo
+              laukas būsimiems inžinerijos ir verslo lyderiams.
+            </p>
+          </div>
+          <div class="image">
+            <img
+              src={Competition.src}
+              alt="Formulės varžyvbos"
+              width="400px"
+              class="image-b"
+            />
+          </div>
+        </div>
+      </div>
+    </LayoutLt>
+  </body>
 </html>

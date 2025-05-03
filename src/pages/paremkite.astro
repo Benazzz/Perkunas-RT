@@ -1,6 +1,8 @@
 ---
 import LayoutLt from "../layouts/Layout_Lt.astro";
 import "../styles/style.css"
+import GPM from "../assets/gpm.png"
+import "../styles/support-us.css"
 ---
 <html lang="lt">
     <head>
@@ -10,14 +12,21 @@ import "../styles/style.css"
     </head>
     <body>
         <LayoutLt>
-            <div class="w-block">
-                <div class="container">
-                    <div>
-                        GPM
+            <div class="w-block first">
+                <div class="container card">
+                    <div class="GPM">
+                        <h1>Skirkite 1.2% GPM!</h1>
+                        <div class="first-p"><img src={GPM.src} alt="1.2$ GPM" width="500px" class="image-b"></div>
                     </div>
-                    <div>
-                        <div>Donate 1 link</div>
-                        <div>Donate 2 link</div>
+                    <div class="support">
+                        <h1>Paremkite!</h1>
+                        <p class="first-p">Jei norėtumėte mums padėti, tiesiog sekite <a href="https://ugc.production.linktr.ee/6f3133ff-ddb9-463b-bd75-395c8c29b987_1-2-paramos-gidas--2-.pdf" target="_blank" class="pdf">šiame PDF faile</a> esančius žingsnius. Užpildę prašymą, atsiųskite mums patvirtinimo PDF paštu perkunasrt@gmail.com.
+                            Kaip padėką - jūsų vardą išdidžiai užrašysime ant mūsų automobilio. 🚗💨</p>
+                        <p>Taip pat galite prisidėti pervesdami tam tikrą sumą per šias platformas:</p>
+                        <div class="donate">
+                            <a href="https://gogetfunding.com/?p=9141413" target="_blank" class="b-block button">Gogetfunding</a>
+                            <a href="https://whydonate.com/en/fundraising/perkunasrt-formula-student-team-ktu" target="_blank" class="b-block button">Whydonate</a>
+                        </div>
                     </div>
                 </div>
             </div>

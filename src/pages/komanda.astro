@@ -1,6 +1,9 @@
 ---
 import LayoutLt from "../layouts/Layout_Lt.astro";
 import "../styles/style.css"
+import "../styles/team.css"
+import NoPicture from "../assets/NoPicture.png"
+import linkedin from "../assets/social_icons/linkedin.png"
 ---
 <html lang="lt">
     <head>
@@ -10,74 +13,167 @@ import "../styles/style.css"
     </head>
     <body>
         <LayoutLt>
-            <div class="y-block">
-                <div class="container">
-                    <div>
-                        Structure Info
+            <div class="y-block first">
+                <div class="container card">
+                    <div class="main-info">
+                        <h1>Komandos struktūra</h1>
+                        <p class="first-p">Organizaciją sudaro keli specializuoti padaliniai, kurių kiekvienas yra atsakingas
+                            už tam tikrą automobilio kūrimo aspektą. Komanda veikia kaip vientisas organizmas, 
+                            kuriame techniniai ir verslo skyriai glaudžiai bendradarbiauja - nuo pirminės idėjos 
+                            iki galutinio produkto, pasiruošusio startui trasoje.
+                        </p>
                     </div>
-                    <div>
-                        ManagementImg
+                    <div class="main-lead">
+                        <div>
+                            <img src={NoPicture.src} alt="Benas Lukoševičius" width="300px" class="image">
+                            <p class="name first-p">Benas Lukoševičius</p>
+                            <p class="role">Vyriausiasis inžinierius</p>
+                            <div class="contacts">
+                                <p class="email-team">benluk2@ktu.lt</p>
+                                <a href=""><img src={linkedin.src} alt="Linkedin" width="40px"></a>
+                            </div>
+                        </div>
+                        <div>
+                            <img src={NoPicture.src} alt="Deivid Mico" width="300px" class="image">
+                            <p class="name first-p">Deivid Mico</p>
+                            <p class="role">Vyriausiojo inžinieriaus pavaduotojas</p>
+                            <div class="contacts">
+                                <p class="email-team">deimic@ktu.lt</p>
+                                <a href=""><img src={linkedin.src} alt="Linkedin" width="40px"></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="y-b"></div>
             <div class="b-block">
-                <div class="container">
-                    <div>
-                        Aerodynamics Info
+                <div class="container card">
+                    <div class="info">
+                        <h1>Aerodinamikos komanda</h1>
+                        <p class="first-p">Atsakinga už oro srautų valdymą aplink automobilį, siekiant padidinti
+                            prispaudžiajmąją jėgą ir sumažinti pasipriešinimą. Komanda projektuoja priekinį ir 
+                            galinį sparnus, difuzorių, grindų plokštumas ir kitus elementus, kurie padeda užtikrinti
+                            stabilumą aukšto greičiu. Vykdydami skaičiavimus ir testavimus, komandos nariai optimizuoja 
+                            aerodinaminius parametrus, siekdami didžiausio efektyvumo trasoje.
+                        </p>
                     </div>
-                    <div>
-                        Aerodynamics Lead
+                    <div class="lead">
+                        <img src={NoPicture.src} alt="Murad Abdullayev" width="300px" class="image">
+                        <p class="name first-p">Murad Abdullayev</p>
+                        <p class="role">Aerodinamikos komandos vadovas</p>
+                        <div class="contacts">
+                            <p class="email-team">aaaaaa@ktu.lt</p>
+                            <a href=""><img src={linkedin.src} alt="Linkedin" width="40px"></a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="b-w"></div>
             <div class="w-block">
-                <div class="container">
-                    <div>
-                        Business Info
+                <div class="container card">
+                    <div class="info">
+                        <h1>Korpuso ir važiuoklės komanda</h1>
+                        <p class="first-p">Atsakinga už automobilio struktūrą, rėmo ir kėbulo projektavimą. Komanda kuria lengvą ir 
+                            tvirtą važiuoklę, atlaikančią apkrovas lenktynių metu, bei užtikrina, kad kėbulo konstrukcija būtų ne tik 
+                            saugi vairuotojui, bet ir palanki, struktūriškai stanti. Ši komanda glaudžiai bendradarbiauja su kitomis 
+                            komandomis, kad visi komponentai tilptų, būtų tvirtinami ir veiktų efektyviai.
+                        </p>
                     </div>
-                    <div>
-                        Business lead
+                    <div class="lead">
+                        <img src={NoPicture.src} alt="Benas Mangevičius" width="300px" class="image">
+                        <p class="name first-p">Benas Mangevičius</p>
+                        <p class="role">Korpuso ir važiuoklės komandos vadovas</p>
+                        <div class="contacts">
+                            <p class="email-team">aaaaaa@ktu.lt</p>
+                            <a href=""><img src={linkedin.src} alt="Linkedin" width="40px"></a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="w-y"></div>
             <div class="y-block">
-                <div class="container">
-                    <div>
-                        Electronics Info
+                <div class="container card">
+                    <div class="info">
+                        <h1>Pavarų sistemos komanda</h1>
+                        <p class="first-p">Projektuoja ir integruoja pavarų sistemą, kurios veikimas lemia automobilio greitį
+                            , akseleraciją ir patikimumą. Šis skyrius sprendžia, kokio tipo variklis bus naudojamas, projektuoja 
+                            pavarų dėžės sprendimus, integruoja aušinimo sistemas bei stebi šiluminį ir mechaninį komponentų 
+                            efektyvumą.
+                        </p>
                     </div>
-                    <div>
-                        Electronis Lead
+                    <div class="lead">
+                        <img src={NoPicture.src} alt="Ervinas Rimkevičius" width="300px" class="image">
+                        <p class="name first-p">Ervinas Rimkevičius</p>
+                        <p class="role">Pavarų sistemos komandos vadovas</p>
+                        <div class="contacts">
+                            <p class="email-team">aaaaaa@ktu.lt</p>
+                            <a href=""><img src={linkedin.src} alt="Linkedin" width="40px"></a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="y-b"></div>
             <div class="b-block">
-                <div class="container">
-                    <div>
-                        Software Info
+                <div class="container card">
+                    <div class="info">
+                        <h1>Pakabos komanda</h1>
+                        <p class="first-p">Kuria sprendimus, užtikrinančius puikų automobilio valdymą, stabilumą ir komfortą trasoje. 
+                            Komanda projektuoja ratų geometrija, amortizatorių ir spyruoklių parametrus, valdymo svirtis, vairo mechanizmą
+                            bei kitus komponentus. Visos dalys turi būti tiksliai suderintos tam, kad automobilis galėtų optimaliai 
+                            įveikti posūkius, būtų manevringas ir gerai prisitaikytų prie trasos dangos.
+                        </p>
                     </div>
-                    <div>
-                        Software Lead
+                    <div class="lead">
+                        <img src={NoPicture.src} alt="Ugnius Trainys" width="300px" class="image">
+                        <p class="name first-p">Ugnius Trainys</p>
+                        <p class="role">Pakabos komandos vadovas</p>
+                        <div class="contacts">
+                            <p class="email-team">aaaaaa@ktu.lt</p>
+                            <a href=""><img src={linkedin.src} alt="Linkedin" width="40px"></a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="b-w"></div>
             <div class="w-block">
-                <div class="container">
-                    <div>
-                        Mechanics 
+                <div class="container card">
+                    <div class="info">
+                        <h1>Elektronikos ir programinės įrangos komanda</h1>
+                        <p class="first-p">Kuria visą elektrinę infrastruktūrą: laidynus, jutiklius, valdymo blokus ir
+                            vartotojo sąsajas. Komanda taip pat atsakinga už duomenų surinkimo sistemas. Naudojant 
+                            mikrovaldiklius ir programinę įrangą, visi elektroniniai komponentai yra sujungaimi į vieningą
+                            sistemą, leidžiančią analizuoti našumą, aptikti klaidas ir tobulinti sistemą.
+                        </p>
                     </div>
-                        <div>Chasis</div>
-                        <div>PowerTrain</div>
-                        <div>Suspensions</div>
-                    <div>
-                        <div>Mechnaics Lead</div>
-                        <div>Chasis Lead</div>
-                        <div>Powertrain Lead</div>
-                        <div>Suspension Lead</div>
+                    <div class="lead">
+                        <img src={NoPicture.src} alt="Mantas Babonas" width="300px" class="image">
+                        <p class="name first-p">Mantas Babonas</p>
+                        <p class="role">Elektronikos ir programinės įrangos komandos vadovas</p>
+                        <div class="contacts">
+                            <p class="email-team">aaaaaa@ktu.lt</p>
+                            <a href=""><img src={linkedin.src} alt="Linkedin" width="40px"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-y"></div>
+            <div class="y-block">
+                <div class="container card">
+                    <div class="info">
+                        <h1>Verslo ir marketingo komanda</h1>
+                        <p class="first-p">Rūpinasi remėjų paieška, bendradarbiavimu su pramonės partneriais, socialinių tinklų
+                            turiniu, viešaisiais ryšiais, projektų finansavimu bei renginių organizavimu.  Komanda formuoja 
+                            prekės ženklą, kūrybiškai komunikuoja komandos pasiekimus ir kuria įtraukiančius vizualinius bei 
+                            informacinius sprendimus.
+                    </div>
+                    <div class="lead">
+                        <img src={NoPicture.src} alt="Bebras Bebrauskas" width="300px" class="image">
+                        <p class="name first-p">Bebras Bebrauskas</p>
+                        <p class="role">Verslo ir marketingo komandos vadovas</p>
+                        <div class="contacts">
+                            <p class="email-team">aaaaaa@ktu.lt</p>
+                            <a href=""><img src={linkedin.src} alt="Linkedin" width="40px"></a>
+                        </div>
                     </div>
                 </div>
             </div>

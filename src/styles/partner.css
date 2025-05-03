@@ -1,0 +1,47 @@
+h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: justify;
+    padding-bottom: 10px;
+}
+
+.card {
+    padding: 50px 20px;
+}
+
+.partner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.partners-header {
+    padding-bottom: 50px;
+}
+
+.sponsor-logo {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.sponsor-info {
+    padding-left: 50px;
+    width: 70%;
+    border-left: 7px solid #000000;
+}
+
+.sponsor-logo > img {
+    width: 100%;
+}
+
+h2 {
+    font-size: 42px;   
+}

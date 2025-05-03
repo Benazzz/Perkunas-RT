@@ -1,0 +1,21 @@
+p, ul {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.join-us {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0px;
+}
+
+.to-join, .join-info {
+    width: 40%;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

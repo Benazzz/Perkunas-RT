@@ -1,6 +1,8 @@
 ---
 import LayoutLt from "../layouts/Layout_Lt.astro";
 import "../styles/style.css"
+import "../styles/partner.css"
+import Ansys from "../assets/sponsors/ansys.png"
 ---
 <html lang="lt">
     <head>
@@ -10,12 +12,45 @@ import "../styles/style.css"
     </head>
     <body>
         <LayoutLt>
-            <div class="w-block">
-                <div class="container">
-                    <div>Benefits</div>
+            <div class="w-block first">
+                <div class="container card">
                     <div>
-                        <div>Logo</div>
-                        <div>Info</div>
+                        <h1>Prisidėkite prie mūsų sėkmės!</h1>
+                        <p class="first-p">Rėmimas suteikia aukščiausio lygio galimybę tapti dinamiško „Formula Student" projekto dalimi.
+                            Jūsų prekės ženklas gaus aukštą matomumą ant mūsų lenktyninio automobilio, komandos aprangos, 
+                            taip pat per reklamas, rengninius ir pasirodymus varžybose.
+                        </p>
+                        <p>
+                            Remėjai turi unikalią galimybę paveikti mūsų techninę, strateginę ir operatyvinę raidą, užmezgant tiesioginį ryšį
+                            su būsimais inžinieriais ir inovatoriais. Ši partnerystė suteika tiesioginį ryšį su švietimu, leidžia formuoti būsimą
+                            talentą.
+                        </p>
+                        <p>
+                            Mes siekiame kurti ilgalaikius santykius, kurie apimtų kelis sezonus, užtikrinant nuolatinę abipusę naudą. Jūsų parama
+                            taip pat suteikia pirmenybę pasiekti talentingus inžinerijos studentus, kurie bus tinkami būsimiems darbo ir praktikos 
+                            pasiūlymams.
+                        </p>
+                        <p>
+                            Prisijungę nuo pradžių, tapsite visos mūsų kelionės dalimi - nuo idėjos iki varžybų. Padėsite sukurti ne tik lenktyninį 
+                            automobilį, bet ir inovacijų bei meistriškumo kultūrą.
+                        </p>
+                </div>
+            </div>
+            <div class="w-block">
+                <div class="container card">
+                    <h1 class="partners-header">Mūsų partneriai</h1>
+                    <div class="partner">
+                        <div class="sponsor-logo">
+                            <img src={Ansys.src} alt="Ansys">
+                        </div>
+                        <div class="sponsor-info">
+                            <h2>Ansys</h2>
+                            <p class="first-p">Tai pasaulinė inžinerinės simuliacijos programinės įrangos lyderė, siūlanti pažangius sprendimus produktų
+                                kūrimui, testavimui ir optimizavimui. Įmonės programinė įranga leidžia modeliuoti skysčių dinamiką, struktūras, 
+                                elektromagnetiką, šilumą bei daugiafizikinius procesus. Ansys sprendimais naudojasi įvairūs sektoriai - nuo automobilių ir aviacijos
+                                iki energetikos ir sveikatos apsaugos.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
