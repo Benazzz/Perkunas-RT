@@ -45,10 +45,11 @@ p {
     padding-right: 50px;
 }
 
-.sponsor-logo > img {
+.sponsor-logo > a > img {
     width: 100%;
-    max-width: 300px;
+    max-width: 450px;
     height: auto;
+    object-fit: contain;
 }
 
 /* Sponsor Description */

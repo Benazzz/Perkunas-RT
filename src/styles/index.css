@@ -129,4 +129,9 @@
     .sponsor-row img {
         max-height: 80px;
     }
+    .TeamImg {
+        height: 300px; /* Or however tall you want it */
+        object-fit: cover;
+        object-position: center; /* Optional: focus crop center */
+    }
 }
