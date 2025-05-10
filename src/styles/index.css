@@ -129,12 +129,12 @@
     .sponsor-row img {
         max-height: 80px;
     }
+}
 
+@media (max-width: 386px) {
     .TeamImg {
-        height: 300px; /* Fixed height, adjust to match desktop appearance */
-        width: 100vw;
-        object-fit: cover;
+        padding-top: 110px;
+        object-fit: contain;
         object-position: center;
-        padding-top: 110px; /* Already in your CSS */
     }
 }
