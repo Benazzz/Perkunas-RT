@@ -80,9 +80,24 @@ p {
 }
 
 .last {
-    padding-bottom: 20px;
+    padding-bottom: 50px;
 }
 
 .info {
     margin: auto 0px;
+}
+
+.support-email {
+    cursor: pointer;
+    text-decoration: underline;
+    user-select: all;
+}
+
+.notify {
+    position: fixed; 
+    background: #4caf50; 
+    color: white; 
+    padding: 10px 20px; 
+    border-radius: 8px; 
+    margin: 0 50px;
 }

@@ -1,59 +1,105 @@
 ---
 import LayoutLt from "../layouts/Layout_Lt.astro";
-import "../styles/style.css"
-import "../styles/contact-us.css"
-import instagram from "../assets/social_icons/instagram.png"
-import linkedin from "../assets/social_icons/linkedin.png"
-import tiktok from "../assets/social_icons/tiktok.png"
-import facebook from "../assets/social_icons/facebook.png"
+import "../styles/style.css";
+import "../styles/contact-us.css";
+import instagram from "../assets/social_icons/instagram.png";
+import linkedin from "../assets/social_icons/linkedin.png";
+import tiktok from "../assets/social_icons/tiktok.png";
+import facebook from "../assets/social_icons/facebook.png";
 ---
+
 <html lang="lt">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>Perkūnas RT | Susisiekite</title>
-    </head>
-    <body>
-        <LayoutLt>
-            <div class="w-block first">
-                <div class="container card">
-                    <div class="contact">
-                        <h1>Susisiekite!</h1>
-                        <div class="b-block form-container">
-                            <form action="https://formsubmit.co/benasxbenas@gmail.com" class="form" method="post">
-                                <label for="name">Vardas</label>
-                                <input type="text" name="name" placeholder="Vardas" required>
-                                <label for="email">El. Paštas</label>
-                                <input type="email" name="email" placeholder="El. Paštas" required>
-                                <label for="message">Žinutė</label>
-                                <textarea name="message" rows="4" placeholder="Jūsų žinutė" required></textarea>
-                                <label for="reason">Tema</label>
-                                <select name="reason" required>
-                                  <option value="">Pasirinkite...</option>
-                                  <option value="sponsorship">Partnerystė</option>
-                                  <option value="recruitment">Narystė</option>
-                                  <option value="other">Kita</option>
-                                </select>
-                          
-                                <button type="submit" class="w-block">Siųsti</button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="info">
-                        <p>Dėl klausimų, susijusių dėl partnerystės ar narystės organizacijoje, naudokite šią formą arba siųskite el. laišką vienu iš šių adresų:</p>
-                        <p>perkunasrt@gmail.com</p>
-                        <p>benluk2@ktu.lt</p>
-                        <p class="last">deimic@ktu.lt</p>
-                        <p class="last">Taip pat galite tiesiogiai susisiekti su mumis socialiniuose tinkluse.</p>
-                        <div class="contact-socials">
-                            <a href="https://www.instagram.com/perkunasrt_ktu/" target="_blank"><img src={instagram.src} alt="instagram" width="70px"></a>
-                            <a href="https://www.linkedin.com/company/perkunasrt/" target="_blank"><img src={linkedin.src} alt="Linkedin" width="70px"></a>
-                            <a href="https://www.tiktok.com/@perknasrt_ktu?is_from_webapp=1&sender_device=pc" target="_blank"><img src={tiktok.src} alt="tiktok" width="70px"></a>
-                            <a href="https://www.facebook.com/profile.php?id=61575797945434&mibextid=wwXIfr&rdid=w6NzlkfwTN15CfNp&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AUCo2Zyu8%2F%3Fmibextid%3DwwXIfr" target="_blank"><img src={facebook.src} alt="facebook" width="70px"></a>
-                        </div>
-                    </div>
-                </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Perkūnas RT | Susisiekite</title>
+  </head>
+  <body>
+    <LayoutLt>
+      <div class="w-block first">
+        <div class="container card">
+          <div class="contact">
+            <h1>Susisiekite!</h1>
+            <div class="b-block form-container">
+              <form
+                action="https://formsubmit.co/benasxbenas@gmail.com"
+                class="form"
+                method="post"
+              >
+                <label for="name">Vardas</label>
+                <input type="text" name="name" placeholder="Vardas" required />
+                <label for="email">El. Paštas</label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="El. Paštas"
+                  required
+                />
+                <label for="message">Žinutė</label>
+                <textarea
+                  name="message"
+                  rows="4"
+                  placeholder="Jūsų žinutė"
+                  required></textarea>
+                <label for="reason">Tema</label>
+                <select name="reason" required>
+                  <option value="">Pasirinkite...</option>
+                  <option value="sponsorship">Partnerystė</option>
+                  <option value="recruitment">Narystė</option>
+                  <option value="other">Kita</option>
+                </select>
+
+                <button type="submit" class="w-block">Siųsti</button>
+              </form>
             </div>
-        </LayoutLt>
-    </body>
+          </div>
+          <div class="info">
+            <p>
+              Dėl partnerystės, narystės
+              organizacijoje ar kitų klausimų, naudokite šią formą arba siųskite el. laišką vienu
+              iš šių adresų:
+            </p>
+            <p>
+              <span onclick="copyToClipboard()" class="support-email"
+                >perkunasrt@gmail.com</span
+              >
+            </p>
+            <p>
+              <span onclick="copyToClipboard()" class="support-email"
+                >benluk2@ktu.lt</span
+              >
+            </p>
+            <p>
+              <span onclick="copyToClipboard()" class="support-email"
+                >deimic@ktu.lt</span
+              >
+            <p class="last"></p>
+            <p style="text-align: center;">Taip pat galite susiekti su mumis per socialinius tiklus!</p>
+            <div class="contact-socials">
+              <a
+                href="https://www.instagram.com/perkunasrt_ktu/"
+                target="_blank"
+                ><img src={instagram.src} alt="instagram" width="70px" /></a
+              >
+              <a
+                href="https://www.linkedin.com/company/perkunasrt/"
+                target="_blank"
+                ><img src={linkedin.src} alt="Linkedin" width="70px" /></a
+              >
+              <a
+                href="https://www.tiktok.com/@perknasrt_ktu?is_from_webapp=1&sender_device=pc"
+                target="_blank"
+                ><img src={tiktok.src} alt="tiktok" width="70px" /></a
+              >
+              <a
+                href="https://www.facebook.com/profile.php?id=61575797945434&mibextid=wwXIfr&rdid=w6NzlkfwTN15CfNp&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AUCo2Zyu8%2F%3Fmibextid%3DwwXIfr"
+                target="_blank"
+                ><img src={facebook.src} alt="facebook" width="70px" /></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </LayoutLt>
+  </body>
 </html>

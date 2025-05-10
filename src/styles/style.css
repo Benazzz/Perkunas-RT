@@ -23,7 +23,7 @@ body {
     color: #000000;
 }
 
-.w.block {
+.w-block {
     background-color: #ffffff;
     color: #000000;
 }
@@ -44,6 +44,11 @@ body {
 
 .w-y {
     background: linear-gradient(to bottom, #ffffff, #ffff00);
+    height: 50px;
+}
+
+.y-w {
+    background: linear-gradient(to bottom, #ffff00, #ffffff);
     height: 50px;
 }
 

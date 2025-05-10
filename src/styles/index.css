@@ -43,3 +43,9 @@
     margin-bottom: 100px;
     font-size: 60px;
 }
+
+.sponsor-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 80px;
+}

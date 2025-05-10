@@ -3,6 +3,9 @@ import LayoutLt from "../layouts/Layout_Lt.astro";
 import "../styles/style.css"
 import "../styles/partner.css"
 import Ansys from "../assets/sponsors/ansys.png"
+import Brochure from "../assets/Sponsorship brochure LT.pdf"
+import EasyComposition from "../assets/sponsors/easy-composites-logo-simple-curves.jpg"
+
 ---
 <html lang="lt">
     <head>
@@ -12,10 +15,12 @@ import Ansys from "../assets/sponsors/ansys.png"
     </head>
     <body>
         <LayoutLt>
-            <div class="w-block first">
+            <div class="y-block first">
                 <div class="container card">
                     <div>
-                        <h1>Prisidėkite prie mūsų sėkmės!</h1>
+                        <a href="./susisiekite" class="contact">
+                            <h1>Prisidėkite prie mūsų sėkmės!</h1>
+                        </a>
                         <p class="first-p">Rėmimas suteikia aukščiausio lygio galimybę tapti dinamiško „Formula Student" projekto dalimi.
                             Jūsų prekės ženklas gaus aukštą matomumą ant mūsų lenktyninio automobilio, komandos aprangos, 
                             taip pat per reklamas, rengninius ir pasirodymus varžybose.
@@ -34,14 +39,20 @@ import Ansys from "../assets/sponsors/ansys.png"
                             Prisijungę nuo pradžių, tapsite visos mūsų kelionės dalimi - nuo idėjos iki varžybų. Padėsite sukurti ne tik lenktyninį 
                             automobilį, bet ir inovacijų bei meistriškumo kultūrą.
                         </p>
+                        <p>
+                            Norėdami sužinoti daugiau, atsisiųskite <a href={Brochure} download="Sponsorship brochure.pdf" class="brochure">lankstinuką</a>.
+                        </p>
                 </div>
+            </div>
+            <div class="y-w">
+
             </div>
             <div class="w-block">
                 <div class="container card">
                     <h1 class="partners-header">Mūsų partneriai</h1>
                     <div class="partner">
                         <div class="sponsor-logo">
-                            <img src={Ansys.src} alt="Ansys">
+                            <a href="https://www.ansys.com/" target="_blank"><img src={Ansys.src} alt="Ansys" height="120px" /></a>
                         </div>
                         <div class="sponsor-info">
                             <h2>Ansys</h2>
@@ -50,6 +61,19 @@ import Ansys from "../assets/sponsors/ansys.png"
                                 elektromagnetiką, šilumą bei daugiafizikinius procesus. Ansys sprendimais naudojasi įvairūs sektoriai - nuo automobilių ir aviacijos
                                 iki energetikos ir sveikatos apsaugos.
                             </p>
+                        </div>
+                    </div>
+                    <div class="partner">
+                        <div class="sponsor-logo">
+                            <a href="https://www.easycomposites.co.uk" target="_blank"><img src={EasyComposition.src} alt="Ansys" height="150px" /></a>
+                        </div>
+                        <div class="sponsor-info">
+                            <h2>Easy Composites</h2>
+                            <p class="first-p">Tai pasaulinė pažangių kompozitinių medžiagų ir įrangos gamybos bei tiekimo lyderė, siūlanti modernius sprendimus gamybos, 
+                                mokymo ir inžinerijos srityse. Easy Composites specializuojasi anglies pluošto, dervų, vakuuminio formavimo sistemų ir kitų kompozitinių 
+                                technologijų tiekime. Įmonės tikslas - padaryti sudėtingas kompozitinių medžiagų technologijas prieinamas tiek pramonės profesionalams, 
+                                tiek entuziastams. Jos sprendimais naudojasi klientai visame pasaulyje - nuo automobilių ir aviacijos iki sporto įrangos gamybos, dizaino 
+                                ir švietimo sektorių.
                         </div>
                     </div>
                 </div>

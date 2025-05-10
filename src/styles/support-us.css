@@ -48,3 +48,9 @@ p {
 .donate > a {
     margin: 0px;
 }
+
+.support-email {
+    cursor: pointer;
+    text-decoration: underline;
+    user-select: all;
+}

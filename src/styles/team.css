@@ -54,11 +54,6 @@ p {
     gap: 200px;
 }
 
-.image {
-    border-radius: 50%;
-    object-fit: cover;
-}
-
 .name, .role, .contacts {
     text-align: center;
     padding-bottom: 10px;
@@ -72,6 +67,9 @@ p {
 .email-team {
     font-weight: 500;
     padding: 0;
+    text-decoration: underline;
+    cursor: pointer;
+    user-select: all;
 }
 
 .contacts {
@@ -80,4 +78,8 @@ p {
     justify-content: center;
     gap: 10px;
     text-align: center;
+}
+
+.image {
+    border-radius: 50%;
 }
