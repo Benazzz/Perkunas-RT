@@ -4,17 +4,36 @@ import "../styles/navBar.css";
 import "../styles/style.css";
 ---
 
-<div class="b-block">
+<div class="b-block navBar">
     <div class="container containerNav">
-        <div class="logo"><a href="/en"><img src={Logo.src} alt="Perkunas" width="250px"></a></div>
-        <div class="linksNav">
-            <a href="/en/about-us">About Us</a>
-            <a href="/en/team">Team</a>
-            <a href="/en/partners">Partners</a>
-            <a href="/en/join-us">Join Us</a>
-            <a href="/en/support-us">Support Us</a>
-            <a href="/en/contact-us">Contact Us</a>
-            <a href="/">LT</a></div>
+      <div class="logo">
+        <a href="/en"><img src={Logo.src} alt="Perkunas" class="logo-img"></a>
+      </div>
+  
+      <div class="hamburgerWrapper">
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div class="langSwitchMobile">
+          <a href="/">LT</a>
         </div>
+      </div>
+  
+      <div class="linksNav" id="navLinks">
+        <a href="/en/about-us">ABOUT US</a>
+        <a href="/en/team">TEAM</a>
+        <a href="/en/partners">PARTNERS</a>
+        <a href="/en/join-us">JOIN US</a>
+        <a href="/en/support-us">SUPPORT US</a>
+        <a href="/en/contact-us">CONTACT US</a>
+        <div class="langSwitch">
+          <a href="/">LT</a>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+  
+  <script is:inline>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
+  

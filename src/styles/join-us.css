@@ -1,21 +1,95 @@
+/* Base styling */
 p, ul {
     font-size: 20px;
     font-weight: 500;
     text-align: justify;
-}
-
-.join-us {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px 0px;
-}
-
-.to-join, .join-info {
-    width: 40%;
+    hyphens: auto;
 }
 
 ul {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding-left: 20px;
+}
+
+/* Layout Containers */
+.join-us {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 0px;
+    gap: 40px;
+}
+
+.to-join, .join-info {
+    width: 45%;
+}
+
+/* Responsive Image */
+.image-b {
+    width: 100%;
+    height: auto;
+    border: 10px solid #000000;
+}
+
+/* Button Styling */
+.button {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 8px;
+    margin: 20px auto;
+    text-decoration: none; /* ✅ Removed underline */
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    color: #ffff00;
+}
+
+/* Responsive Design: Tablets (≤1024px) */
+@media (max-width: 1024px) {
+    .to-join, .join-info {
+        width: 100%;
+    }
+
+    .join-us {
+        flex-direction: column;
+        padding: 40px 10px;
+    }
+
+    p, ul {
+        font-size: 18px;
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+}
+
+/* Responsive Design: Phones (≤768px) */
+@media (max-width: 768px) {
+    p, ul {
+        font-size: 16px;
+    }
+
+    .join-us {
+        padding: 30px 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .button {
+        font-size: 16px;
+        padding: 10px 24px;
+    }
+
+    ul {
+        padding-left: 16px;
+    }
 }

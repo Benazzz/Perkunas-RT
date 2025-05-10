@@ -6,15 +6,34 @@ import "../styles/style.css";
 
 <div class="b-block navBar">
     <div class="container containerNav">
-        <div class="logo"><a href="/"><img src={Logo.src} alt="Perkūnas" width="250px"></a></div>
-        <div class="linksNav">
-            <a href="/apie-mus">APIE MUS</a>
-            <a href="/komanda">KOMANDA</a>
-            <a href="/partneriai">PARTNERIAI</a>
-            <a href="/prisijunkite">PRISIJUNKITE</a>
-            <a href="/paremkite">PAREMKITE</a>
-            <a href="/susisiekite">SUSISIEKITE</a>
-            <a href="/en">EN</a>
+      <div class="logo">
+        <a href="/"><img src={Logo.src} alt="Perkūnas" class="logo-img"></a>
+      </div>
+  
+      <div class="hamburgerWrapper">
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div class="langSwitchMobile">
+          <a href="/en">EN</a>
         </div>
+      </div>
+  
+      <div class="linksNav" id="navLinks">
+        <a href="/apie-mus">APIE MUS</a>
+        <a href="/komanda">KOMANDA</a>
+        <a href="/partneriai">PARTNERIAI</a>
+        <a href="/prisijunkite">PRISIJUNKITE</a>
+        <a href="/paremkite">PAREMKITE</a>
+        <a href="/susisiekite">SUSISIEKITE</a>
+        <div class="langSwitch">
+          <a href="/en">EN</a>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+  
+  <script is:inline>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
+  

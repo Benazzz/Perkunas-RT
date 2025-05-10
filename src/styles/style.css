@@ -9,13 +9,17 @@
     margin: 0 auto;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
 }
 
 .b-block {
     background-color: #000000;
-    color: #ffffff
+    color: #ffffff;
 }
 
 .y-block {

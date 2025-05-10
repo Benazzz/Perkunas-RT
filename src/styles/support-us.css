@@ -2,17 +2,20 @@
     display: flex;
     justify-content: space-evenly;
     padding: 50px 20px;
+    flex-wrap: wrap;
 }
 
 h1 {
     font-size: 60px;
     text-align: center;
+    hyphens: auto;
 }
 
 p {
     font-size: 20px;
     font-weight: 500;
     text-align: justify;
+    hyphens: auto;
 }
 
 .GPM {
@@ -21,6 +24,13 @@ p {
     justify-content: center;
     text-align: center;
     align-items: center;
+    padding-bottom: 30px;
+}
+
+.GPM img {
+    width: 100%;       /* Makes the image responsive */
+    max-width: 500px;  /* Prevents the image from exceeding 500px */
+    height: auto;      /* Keeps the aspect ratio intact */
 }
 
 .GPM, .support {
@@ -33,7 +43,7 @@ p {
 }
 
 .pdf:hover {
-    color: #555555
+    color: #555555;
 }
 
 .support > p {
@@ -43,14 +53,84 @@ p {
 .donate {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .donate > a {
-    margin: 0px;
+    margin: 0;
+    text-decoration: none;
 }
 
 .support-email {
     cursor: pointer;
     text-decoration: underline;
     user-select: all;
+}
+
+.button:hover {
+    color: #ffff00;
+}
+
+.button {
+    font-weight: 600;
+}
+
+/* Responsive Design for screens 768px and below (Mobile) */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    .GPM, .support {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .donate {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .donate > a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Responsive Design for tablets 768px to 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .card {
+        flex-direction: row;
+        padding: 40px 20px;
+    }
+
+    .GPM, .support {
+        width: 48%;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 19px;
+    }
+
+    .donate {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .donate > a {
+        width: auto;
+    }
 }
