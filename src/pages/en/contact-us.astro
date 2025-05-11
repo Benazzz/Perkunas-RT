@@ -26,7 +26,9 @@ import facebook from "../../assets/social_icons/facebook.png";
                 class="form"
                 method="post"
                 netlify
+                id="contact-form"
               >
+            
                 <label for="name">Name</label>
                 <input type="text" name="name" placeholder="Name" required />
                 <label for="email">Email</label>
@@ -52,6 +54,9 @@ import facebook from "../../assets/social_icons/facebook.png";
 
                 <button type="submit" class="w-block">Send</button>
               </form>
+              <div id="success-alert" class="success-alert" style="display: none;">
+                Thank you! Your message has been sent successfully.
+              </div>              
             </div>
           </div>
           <div class="info">
@@ -103,4 +108,45 @@ import facebook from "../../assets/social_icons/facebook.png";
       </div>
     </LayoutEn>
   </body>
+  
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-form") as HTMLFormElement | null;
+  const alertBox = document.getElementById("success-alert") as HTMLElement | null;
+
+  if (form && alertBox) {
+    form.addEventListener("submit", (e: Event) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      const formEntries = Array.from(formData.entries()).map(([key, value]) => [
+        key,
+        typeof value === "string" ? value : value.name,
+      ]);
+
+      const encoded = new URLSearchParams(formEntries as [string, string][]).toString();
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encoded,
+      })
+        .then(() => {
+          alertBox.style.display = "block";
+          alertBox.style.opacity = "1";
+          form.reset();
+
+          setTimeout(() => {
+            alertBox.style.opacity = "0";
+            setTimeout(() => {
+              alertBox.style.display = "none";
+            }, 300); // extra delay to allow fade out
+          }, 800); // 0.5 second display
+        })
+        .catch(() => alert("Oops! Something went wrong."));
+    });
+  }
+});
+
+  </script>
 </html>
