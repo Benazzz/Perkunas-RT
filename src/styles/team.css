@@ -72,6 +72,9 @@ p {
     text-decoration: underline;
     cursor: pointer;
     user-select: all;
+    -webkit-user-select: all;
+    -moz-user-select: all; 
+    -ms-user-select: all; 
 }
 
 .contacts {

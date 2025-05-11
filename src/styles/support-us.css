@@ -66,6 +66,9 @@ p {
     cursor: pointer;
     text-decoration: underline;
     user-select: all;
+    -webkit-user-select: all;
+    -moz-user-select: all; 
+    -ms-user-select: all; 
 }
 
 .button:hover {

@@ -27,6 +27,9 @@
     padding-top: 30px;
     word-break: break-word;
     user-select: all;
+    -webkit-user-select: all;
+    -moz-user-select: all; 
+    -ms-user-select: all; 
     text-decoration: underline;
     cursor: pointer;
 }
