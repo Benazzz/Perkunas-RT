@@ -1,0 +1,84 @@
+---
+import LayoutEn from "../../layouts/Layout_En.astro";
+import "../../styles/style.css"
+import "../../styles/partner.css"
+import Ansys from "../../assets/sponsors/ansys.png"
+import Brochure from "../../assets/Sponsorship brochure EN.pdf"
+import EasyComposition from "../../assets/sponsors/easy-composites-logo-simple-curves.jpg"
+
+---
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Perkūnas RT | Partners</title>
+    </head>
+    <body>
+        <LayoutEn>
+            <div class="y-block first">
+                <div class="container card">
+                    <div>
+                        <a href="/en/contact-us" class="contact">
+                            <h1>Contribute to our success!</h1>
+                        </a>
+                        <p class="first-p">
+                            Sponsorship provides a top-level opportunity to become part of the dynamic "Formula Student" project. Your brand will gain high visibility on our 
+                            race car, team apparel, as well as through advertisements, events, and performances at competitions.
+                          </p>
+                          <p>
+                            Sponsors have a unique opportunity to influence our technical, strategic, and operational development by establishing direct connections with 
+                            future engineers and innovators. This partnership offers a direct link to education and helps shape future talent.
+                          </p>
+                          <p>
+                            We aim to build long-term relationships that span multiple seasons, ensuring continuous mutual benefit. Your support also gives you priority 
+                            access to talented engineering students who will be suitable for future job and internship opportunities.
+                          </p>
+                          <p>
+                            By joining from the beginning, you will become part of our entire journey - from the idea to the competition. You'll help create not just a race car, 
+                            but also a culture of innovation and excellence.
+                          </p>
+                          <p>
+                            To learn more, download the <a href={Brochure} download="Sponsorship brochure.pdf" class="brochure">brochure</a>.
+                          </p>
+                </div>
+            </div>
+            <div class="y-w">
+
+            </div>
+            <div class="w-block">
+                <div class="container card">
+                    <h1 class="partners-header">Our sponsors</h1>
+                    <div class="partner">
+                        <div class="sponsor-logo">
+                            <a href="https://www.ansys.com/" target="_blank"><img src={Ansys.src} alt="Ansys"/></a>
+                        </div>
+                        <div class="sponsor-info">
+                            <h2>Ansys</h2>
+                            <p class="first-p">
+                                It is a global leader in engineering simulation software, offering advanced solutions for product development, testing, and optimization. 
+                                The company's software allows for modeling fluid dynamics, structures, electromagnetics, heat, and multiphysics processes. Ansys solutions 
+                                are used by various industries - from automotive and aerospace to energy and healthcare.
+                              </p>
+                              
+                        </div>
+                    </div>
+                    <div class="partner">
+                        <div class="sponsor-logo">
+                            <a href="https://www.easycomposites.co.uk" target="_blank"><img src={EasyComposition.src} alt="Ansys" /></a>
+                        </div>
+                        <div class="sponsor-info">
+                            <h2>Easy Composites</h2>
+                            <p class="first-p">
+                                It is a global leader in the production and supply of advanced composite materials and equipment, offering modern solutions in manufacturing, 
+                                education, and engineering. Easy Composites specializes in the supply of carbon fiber, resins, vacuum forming systems, and other composite 
+                                technologies. The company's goal is to make complex composite material technologies accessible to both industry professionals and enthusiasts. 
+                                Its solutions are used by clients worldwide - from automotive and aerospace to sports equipment manufacturing, design, and education sectors.
+                              </p>
+                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </LayoutEn>
+    </body>
+</html>

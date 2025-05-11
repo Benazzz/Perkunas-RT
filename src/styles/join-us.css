@@ -41,7 +41,6 @@ ul {
     margin: 20px auto;
     text-decoration: none; /* ✅ Removed underline */
     font-weight: 600;
-    transition: background-color 0.3s, color 0.3s;
 }
 
 .button:hover {
@@ -68,6 +67,11 @@ ul {
         font-size: 36px;
         text-align: center;
     }
+
+    .button {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 /* Responsive Design: Phones (≤768px) */
@@ -91,5 +95,8 @@ ul {
 
     ul {
         padding-left: 16px;
+    }
+    .image-b {
+        border-width: 5px;
     }
 }

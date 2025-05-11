@@ -1,0 +1,56 @@
+---
+import LayoutEn from "../../layouts/Layout_En.astro";
+import "../../styles/style.css";
+import "../../styles/join-us.css";
+import Team from "../../assets/Team.png";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Perkūnas RT | Join us</title>
+  </head>
+  <body>
+    <LayoutEn>
+      <div class="y-block first">
+        <div class="container join-us">
+          <div class="to-join">
+            <div>
+              <h1>Want to join?</h1>
+              <p class="first-p">
+                To join, click the button below and fill out the form. We are looking for new members in September and February, but if 
+                you have experience in engineering, business, or even in "Formula Student" competitions - we will take that into consideration.
+              </p>
+              
+              <a class="button b-block" href="https://docs.google.com/forms/d/e/1FAIpQLSdwLiYJsdeDij5YE5FDXWvOn8sIecHKf9AITatkuBPsYKg6zQ/viewform" target="_blank">JOIN</a>
+            </div>
+            <div>
+                <img src={Team.src} alt="Team" width="100%" class="image-b">
+            </div>
+          </div>
+          <div class="join-info">
+            <h1>What will you gain by joining?</h1>
+            <ul>
+                <li class="first-p">
+                    You will gain practical experience in creating, designing, and testing a high-quality vehicle.
+                </li>
+                <li>
+                    By working with sponsors and representing the team, you will learn about business, marketing, and project management.
+                </li>
+                <li>
+                    You will develop teamwork, leadership, and time management skills in a collaborative environment.
+                </li>
+                <li>
+                    You will build connections with university professors and industry partners, expanding your professional network.
+                  </li>
+                  <li>
+                    You will gain valuable knowledge and skills that will help you prepare for future engineering and business challenges.
+                  </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </LayoutEn>
+  </body>
+</html>

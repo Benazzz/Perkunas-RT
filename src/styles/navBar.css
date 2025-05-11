@@ -94,7 +94,7 @@
 }
 
 /* Responsive styles */
-@media (max-width: 1200px) {
+@media (max-width: 1470px) {
     .hamburgerWrapper {
         display: flex;
     }
@@ -105,7 +105,7 @@
 
     .linksNav {
         position: absolute;
-        top: 100%;
+        top: 95%;
         left: 0;
         background-color: #000000;
         width: 100%;
@@ -146,16 +146,6 @@
 
     .linksNav a {
         font-size: 16px;
-    }
-}
-
-@media (min-width: 1201px) {
-    .langSwitchMobile {
-        display: none;
-    }
-
-    .linksNav {
-        flex-direction: row;
     }
 }
 

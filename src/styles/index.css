@@ -133,8 +133,6 @@
 
 @media (max-width: 386px) {
     .TeamImg {
-        padding-top: 110px;
-        object-fit: contain;
-        object-position: center;
+        padding-top: 100px;
     }
 }

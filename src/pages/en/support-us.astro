@@ -1,0 +1,38 @@
+---
+import LayoutEn from "../../layouts/Layout_En.astro";
+import "../../styles/style.css"
+import GPM from "../../assets/gpm.png"
+import "../../styles/support-us.css"
+---
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Perkūnas RT | Support us</title>
+    </head>
+    <body>
+        <LayoutEn>
+            <div class="w-block first">
+                <div class="container card">
+                    <div class="GPM">
+                        <h1>Donate 1.2% GPM!</h1>
+                        <div class="first-p"><img src={GPM.src} alt="1.2% GPM"  class="image-b"></div>
+                    </div>
+                    <div class="support">
+                        <h1>Support us!</h1>
+                        <p class="first-p">If you would like to help us, simply follow the steps in 
+                            <a href="https://ugc.production.linktr.ee/6f3133ff-ddb9-463b-bd75-395c8c29b987_1-2-paramos-gidas--2-.pdf" target="_blank" class="pdf">
+                            this PDF file</a>. After filling out the application, please send us the confirmation PDF by email at <span class="support-email">
+                                perkunasrt@gmail.com</span>.</p>
+                        <p>As a thank you, we will proudly write your name on our car. 🚗💨</p>
+                        <p>You can also contribute by transferring a certain amount through the following platforms:</p>
+                        <div class="donate">
+                            <a href="https://gogetfunding.com/?p=9141413" target="_blank" class="b-block button">Gogetfunding</a>
+                            <a href="https://whydonate.com/en/fundraising/perkunasrt-formula-student-team-ktu" target="_blank" class="b-block button">Whydonate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </LayoutEn>
+    </body>
+</html>

@@ -1,0 +1,101 @@
+---
+import LayoutEn from "../../layouts/Layout_En.astro";
+import "../../styles/style.css";
+import CarInSun from "../../assets/CarInSun.png";
+import CarInGarage from "../../assets/CarInGarage.png";
+import Competition from "../../assets/Competition.png";
+import "../../styles/about-us.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Perkūnas RT | About Us</title>
+  </head>
+  <body>
+    <LayoutEn>
+      <div class="y-block first">
+        <div class="container about-us">
+          <div class="text">
+            <h1>About Us</h1>
+            <p class="first-p">
+                We are an ambitious team of students creating a race car for the "Formula Student" competition. Our activities 
+                cover the entire development process - from team formation, design, and prototype creation to manufacturing and 
+                preparation for the international competition.
+              </p>
+              <p>
+                When designing the vehicle, we focus on electric vehicle (EV) technologies. Our goal is not only to build a 
+                competitive car but also to provide students with a real opportunity to apply the knowledge gained during their studies in 
+                practice - in engineering, business, and project management.
+              </p>
+              <p>
+                Our encourages collaboration, responsibility, and leadership - values that help each member grow and enable us to achieve ambitious goals together.
+              </p>
+          </div>
+          <div class="image">
+            <img
+              src={CarInSun.src}
+              alt="Car in sun"
+              width="400px"
+              class="image-b"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="y-b"></div>
+      <div class="b-block">
+        <div class="container mission">
+          <div class="image">
+            <img
+              src={CarInGarage.src}
+              alt="Car in garage"
+              width="400px"
+              class="image-y"
+            />
+          </div>
+          <div class="text">
+            <h1>Mission</h1>
+            <p class="first-p">
+                We develop future leaders in the fields of engineering, technology, and business by providing a space where theoretical knowledge 
+                turns into real-world solutions. Working as a united team, we not only building a car but also creating a sustainable learning environment 
+                that improves communication and problem-solving skills.
+              </p>
+              <p>
+                We are committed to encouraging growth, building strong partnerships with industry professionals, and pushing the boundaries of student 
+                motorsport, contributing to progress and innovation in Lithuania and the international market.
+              </p
+          </div>
+        </div>
+      </div>
+      <div class="b-w"></div>
+      <div class="w-block">
+        <div class="container competition">
+          <div class="text">
+            <h1>Competition</h1>
+            <p class="first-p">
+                "Formula Student" is one of the most prestigious engineering competitions in the world, bringing together university student engineers
+                 from around the globe to showcase their skills in design, manufacturing, testing, and project management.
+              </p>
+              <p>
+                The competition challenges teams both on and off the track. Teams must present a complete business plan, including marketing strategies, 
+                manufacturing feasibility, and cost analysis, simulating the launch of a real-world product.
+              </p>
+              <p>
+                Success depends on creativity, technical excellence, innovation, and teamwork, making "Formula Student" a true proving ground for future 
+                leaders in engineering and business.
+              </p>
+          </div>
+          <div class="image">
+            <img
+              src={Competition.src}
+              alt="Forumula Student Competition"
+              width="400px"
+              class="image-b"
+            />
+          </div>
+        </div>
+      </div>
+    </LayoutEn>
+  </body>
+</html>
