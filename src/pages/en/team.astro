@@ -3,12 +3,17 @@ import LayoutEn from "../../layouts/Layout_En.astro";
 import "../../styles/style.css"
 import "../../styles/team.css"
 import NoPicture from "../../assets/NoPicture.png"
+import favicon from "../../assets/favicon.png" 
+import Benas from "../../assets/Leads/Benas.png"
+import Mantas from "../../assets/Leads/Mantas.png"
+import Domas from "../../assets/Leads/Domas.png"
 ---
 <html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <meta name="format-detection" content="email=no">
+        <link rel="icon" type="image/png" href={favicon.src}> 
         <title>Perkūnas RT | Team</title>
     </head>
     <body>
@@ -25,7 +30,7 @@ import NoPicture from "../../assets/NoPicture.png"
                     </div>
                     <div class="main-lead">
                         <div>
-                            <img src={NoPicture.src} alt="Benas Lukoševičius" width="300px" class="image">
+                            <img src={Benas.src} alt="Benas Lukoševičius" width="300px" class="image">
                             <p class="name first-p">Benas Lukoševičius</p>
                             <p class="role">Chief Engineer</p>
                             <div class="contacts">
@@ -144,7 +149,7 @@ import NoPicture from "../../assets/NoPicture.png"
                           
                     </div>
                     <div class="lead">
-                        <img src={NoPicture.src} alt="Mantas Babonas" width="300px" class="image">
+                        <img src={Mantas.src} alt="Mantas Babonas" width="300px" class="image">
                         <p class="name first-p">Mantas Babonas</p>
                         <p class="role">Lead Engineer</p>
                         <div class="contacts">
@@ -165,11 +170,11 @@ import NoPicture from "../../assets/NoPicture.png"
                           
                     </div>
                     <div class="lead">
-                        <img src={NoPicture.src} alt="No team lead" width="300px" class="image">
-                        <p class="name first-p">-----</p>
-                        <p class="role">Business Manager</p>
+                        <img src={Domas.src} alt="Domas Grigaliūnas" width="300px" class="image">
+                        <p class="name first-p">Domas Grigaliūnas</p>
+                        <p class="role">Member</p>
                         <div class="contacts">
-                            <!-- <p class="email-team">aaaaaa@ktu.lt</p> -->
+                            <p class="email-team">perkunasrt@gmail.com</p>
                         </div>
                     </div>
                 </div>

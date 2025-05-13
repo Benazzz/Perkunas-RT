@@ -6,6 +6,7 @@ import instagram from "../../assets/social_icons/instagram.png";
 import linkedin from "../../assets/social_icons/linkedin.png";
 import tiktok from "../../assets/social_icons/tiktok.png";
 import facebook from "../../assets/social_icons/facebook.png";
+import favicon from "../../assets/favicon.png" 
 ---
 
 <html lang="en">
@@ -13,6 +14,7 @@ import facebook from "../../assets/social_icons/facebook.png";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="format-detection" content="email=no">
+    <link rel="icon" type="image/png" href={favicon.src}> 
     <title>Perkūnas RT | Contact us</title>
   </head>
   <body>
@@ -25,7 +27,7 @@ import facebook from "../../assets/social_icons/facebook.png";
               <form
                 class="form"
                 method="post"
-                netlify
+                data-netlify="true"
                 id="contact-form"
               >
             
@@ -47,8 +49,8 @@ import facebook from "../../assets/social_icons/facebook.png";
                 <label for="reason">Subject</label>
                 <select name="reason" required>
                   <option value="">Select...</option>
-                  <option value="sponsorship">Partnership</option>
-                  <option value="recruitment">Membership</option>
+                  <option value="Sponsorship">Partnership</option>
+                  <option value="Recruitment">Membership</option>
                   <option value="Other">Other</option>
                 </select>
 
