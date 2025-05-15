@@ -131,8 +131,23 @@
     }
 }
 
-@media (max-width: 386px) {
+@media (max-width: 480px) {
+    .sponsor-row img {
+        max-height: 70px;
+    }
+}
+
+@media (max-width: 420px) {
     .TeamImg {
-        padding-top: 100px;
+        padding-top: 110px;
+    }
+    .sponsor-row img {
+        max-height: 60px;
+    }
+}
+
+@media (max-width: 350px) {
+    .sponsor-row img {
+        max-height: 50px;
     }
 }
