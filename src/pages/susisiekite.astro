@@ -126,7 +126,7 @@ import favicon from "../assets/favicon.png"
 
             const encoded = new URLSearchParams(formEntries).toString();
 
-            fetch("/send.php", {
+            fetch("../send.php", {
               method: "POST",
               headers: { "Content-Type": "application/x-www-form-urlencoded" },
               body: encoded,
