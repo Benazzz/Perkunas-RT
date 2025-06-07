@@ -28,7 +28,7 @@ import favicon from "../assets/favicon.png"
                 class="form"
                 method="post"
                 id="contact-form"
-                action="../send.php"
+                action="/send.php"
               >
                 <label for="name">Vardas</label>
                 <input type="text" name="name" placeholder="Vardas" required />
@@ -126,7 +126,7 @@ import favicon from "../assets/favicon.png"
 
             const encoded = new URLSearchParams(formEntries).toString();
 
-            fetch("https://perkunasrt.com/send.php", {
+            fetch("/send.php", {
               method: "POST",
               headers: { "Content-Type": "application/x-www-form-urlencoded" },
               body: encoded,
