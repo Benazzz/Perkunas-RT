@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Prepare email
-    $to = "benasxbenas@gmail.com";  // Change to your actual recipient email address
+    $to = "benastenas9@gmail.com";  // Change to your actual recipient email address
     $subject = "Nauja žinutė iš kontaktų formos: $reason";
     $body = "Vardas: $name\n";
     $body .= "El. Paštas: $email\n";
