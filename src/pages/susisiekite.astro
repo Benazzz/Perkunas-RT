@@ -109,43 +109,48 @@ import favicon from "../assets/favicon.png"
       </div>
     </LayoutLt>
   </body>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("contact-form") as HTMLFormElement | null;
-  const alertBox = document.getElementById("success-alert") as HTMLElement | null;
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("contact-form");
+        const alertBox = document.getElementById("success-alert");
 
-  if (form && alertBox) {
-    form.addEventListener("submit", (e: Event) => {
+        if (form instanceof HTMLFormElement && alertBox instanceof HTMLElement) {
+          form.addEventListener("submit", (e) => {
+            e.preventDefault();
 
-      const formData = new FormData(form);
-      const formEntries = Array.from(formData.entries()).map(([key, value]) => [
-        key,
-        typeof value === "string" ? value : value.name,
-      ]);
+            const formData = new FormData(form);
+            const formEntries = Array.from(formData.entries()).map(([key, value]) => [
+              key,
+              typeof value === "string" ? value : value.name,
+            ]);
 
-      const encoded = new URLSearchParams(formEntries as [string, string][]).toString();
+            const encoded = new URLSearchParams(formEntries).toString();
 
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encoded,
-      })
-        .then(() => {
-          alertBox.style.display = "block";
-          alertBox.style.opacity = "1";
-          form.reset();
+            fetch("../send.php", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: encoded,
+            })
+              .then((response) => {
+                if (!response.ok) throw new Error("Network response was not ok");
+                return response.text();
+              })
+              .then(() => {
+                alertBox.style.display = "block";
+                alertBox.style.opacity = "1";
+                form.reset();
 
-          setTimeout(() => {
-            alertBox.style.opacity = "0";
-            setTimeout(() => {
-              alertBox.style.display = "none";
-            }, 300); // extra delay to allow fade out
-          }, 800); // 0.5 second display
-        })
-        .catch(() => alert("Oops! Something went wrong."));
-    });
-  }
-});
+                setTimeout(() => {
+                  alertBox.style.opacity = "0";
+                  setTimeout(() => {
+                    alertBox.style.display = "none";
+                  }, 300);
+                }, 1500);
+              })
+              .catch(() => alert("Oops! Something went wrong."));
+          });
+        }
+      });
+    </script>
 
-  </script>
 </html>
