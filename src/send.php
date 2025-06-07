@@ -1,5 +1,7 @@
 <?php
+file_put_contents(__DIR__ . "/test_log.txt", date('Y-m-d H:i:s') . " - Script started\n", FILE_APPEND);
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    file_put_contents(__DIR__ . "/test_log.txt", date('Y-m-d H:i:s') . " - POST received\n", FILE_APPEND);
     // Sanitize and fetch inputs
     $name = filter_var($_POST['name'] ?? '', FILTER_SANITIZE_STRING);
     $email = filter_var($_POST['email'] ?? '', FILTER_VALIDATE_EMAIL);
