@@ -22,6 +22,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $headers = "From: $email\r\nReply-To: $email\r\n";
 
+    $mailResult = mail($to, $subject, $body, $headers);
+
+    file_put_contents("mail_log.txt", date('Y-m-d H:i:s') . " - to: $to, subject: $subject, result: " . ($mailResult ? "success" : "failure") . "\n", FILE_APPEND);
+
     if (mail($to, $subject, $body, $headers)) {
         http_response_code(200);
         echo "Message sent successfully.";
