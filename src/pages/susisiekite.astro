@@ -116,7 +116,6 @@ import favicon from "../assets/favicon.png"
 
   if (form && alertBox) {
     form.addEventListener("submit", (e: Event) => {
-      e.preventDefault();
 
       const formData = new FormData(form);
       const formEntries = Array.from(formData.entries()).map(([key, value]) => [
