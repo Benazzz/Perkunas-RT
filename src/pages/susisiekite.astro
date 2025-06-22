@@ -26,28 +26,29 @@ import favicon from "../assets/favicon.png"
             <div class="b-block form-container">
               <form
                 class="form"
-                id="contact-form"
-                onsubmit="sendEmail(); return false;"
+                action="https://formsubmit.co/benastenas9@gmail.com"
+                method="POST"
+                target="_blank"
               >
                 <label for="name">Vardas</label>
-                <input type="text" name="name" id="name" placeholder="Vardas" required />
+                <input type="text" name="Name" id="name" placeholder="Vardas" required />
                 <label for="email">El. Paštas</label>
                 <input
                   type="email"
-                  name="email"
+                  name="Email"
                   placeholder="El. Paštas"
                   id="email"
                   required
                 />
                 <label for="message">Žinutė</label>
                 <textarea
-                  name="message"
+                  name="Message"
                   rows="4"
                   placeholder="Jūsų žinutė"
                   id="message"
                   required></textarea>
                 <label for="reason">Tema</label>
-                <select name="reason" required id="reason">
+                <select name="Reason" required id="reason">
                   <option value="">Pasirinkite...</option>
                   <option value="Sponsorship">Partnerystė</option>
                   <option value="Recruitment">Narystė</option>
