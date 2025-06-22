@@ -26,17 +26,17 @@ import favicon from "../assets/favicon.png"
             <div class="b-block form-container">
               <form
                 class="form"
-                method="post"
                 id="contact-form"
-                action="/send.php"
+                onsubmit="sendEmail(); return false;"
               >
                 <label for="name">Vardas</label>
-                <input type="text" name="name" placeholder="Vardas" required />
+                <input type="text" name="name" id="name" placeholder="Vardas" required />
                 <label for="email">El. Paštas</label>
                 <input
                   type="email"
                   name="email"
                   placeholder="El. Paštas"
+                  id="email"
                   required
                 />
                 <label for="message">Žinutė</label>
@@ -44,9 +44,10 @@ import favicon from "../assets/favicon.png"
                   name="message"
                   rows="4"
                   placeholder="Jūsų žinutė"
+                  id="message"
                   required></textarea>
                 <label for="reason">Tema</label>
-                <select name="reason" required>
+                <select name="reason" required id="reason">
                   <option value="">Pasirinkite...</option>
                   <option value="Sponsorship">Partnerystė</option>
                   <option value="Recruitment">Narystė</option>
@@ -54,10 +55,7 @@ import favicon from "../assets/favicon.png"
                 </select>
 
                 <button type="submit" class="w-block">Siųsti</button>
-              </form>
-              <div id="success-alert" class="success-alert" style="display: none;">
-                Ačiū! Jūsų žinutė buvo nusiųsta sėkmingai.
-              </div>   
+              </form> 
             </div>
           </div>
           <div class="info">
@@ -109,48 +107,4 @@ import favicon from "../assets/favicon.png"
       </div>
     </LayoutLt>
   </body>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const form = document.getElementById("contact-form");
-        const alertBox = document.getElementById("success-alert");
-
-        if (form instanceof HTMLFormElement && alertBox instanceof HTMLElement) {
-          form.addEventListener("submit", (e) => {
-            e.preventDefault();
-
-            const formData = new FormData(form);
-            const formEntries = Array.from(formData.entries()).map(([key, value]) => [
-              key,
-              typeof value === "string" ? value : value.name,
-            ]);
-
-            const encoded = new URLSearchParams(formEntries).toString();
-
-            fetch("/send.php", {
-              method: "POST",
-              headers: { "Content-Type": "application/x-www-form-urlencoded" },
-              body: encoded,
-            })
-              .then((response) => {
-                if (!response.ok) throw new Error("Network response was not ok");
-                return response.text();
-              })
-              .then(() => {
-                alertBox.style.display = "block";
-                alertBox.style.opacity = "1";
-                form.reset();
-
-                setTimeout(() => {
-                  alertBox.style.opacity = "0";
-                  setTimeout(() => {
-                    alertBox.style.display = "none";
-                  }, 300);
-                }, 1500);
-              })
-              .catch(() => alert("Oops! Something went wrong."));
-          });
-        }
-      });
-    </script>
-
 </html>

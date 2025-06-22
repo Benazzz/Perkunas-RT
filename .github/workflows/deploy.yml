@@ -22,7 +22,6 @@ jobs:
         run: |
           npm ci
           npm run build
-          cp src/send.php dist/send.php
 
       - name: Copy to VPS via rsync over SSH
         uses: burnett01/rsync-deployments@7.0.2
