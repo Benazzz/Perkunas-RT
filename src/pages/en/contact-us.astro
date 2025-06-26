@@ -42,7 +42,7 @@ import favicon from "../../assets/favicon.png"
           const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
           if (!submitButton) return;
           submitButton.disabled = true;
-          submitButton.textContent = 'Siunčiama...';
+          submitButton.textContent = 'Sending...';
           
           try {
             const response = await fetch(form.action, {
@@ -64,7 +64,7 @@ import favicon from "../../assets/favicon.png"
           } finally {
             if (submitButton) {
               submitButton.disabled = false;
-              submitButton.textContent = 'Siųsti';
+              submitButton.textContent = 'Send';
             }
             form.removeChild(captchaInput);
             form.removeChild(honeypot);
@@ -125,7 +125,7 @@ import favicon from "../../assets/favicon.png"
             <div class="b-block form-container">
               <form
                 class="form"
-                action="https://formsubmit.co/benastenas9@gmail.com"
+                action="https://formsubmit.co/perkunasrt@gmail.com"
                 method="POST"
               >
             
