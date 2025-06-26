@@ -16,6 +16,105 @@ import favicon from "../../assets/favicon.png"
     <meta name="format-detection" content="email=no">
     <link rel="icon" type="image/png" href={favicon.src}> 
     <title>Perkūnas RT | Contact us</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('.form') as HTMLFormElement | null;
+        if (!form) return;
+
+        form.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          
+          // Create a hidden input for FormSubmit's captcha
+          const captchaInput = document.createElement('input');
+          captchaInput.type = 'hidden';
+          captchaInput.name = '_captcha';
+          captchaInput.value = 'false';
+          form.appendChild(captchaInput);
+          
+          // Add a honeypot field (FormSubmit requires this for AJAX)
+          const honeypot = document.createElement('input');
+          honeypot.type = 'text';
+          honeypot.name = '_honey';
+          honeypot.style.display = 'none';
+          form.appendChild(honeypot);
+          
+          // Disable submit button during submission
+          const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+          if (!submitButton) return;
+          submitButton.disabled = true;
+          submitButton.textContent = 'Siunčiama...';
+          
+          try {
+            const response = await fetch(form.action, {
+              method: 'POST',
+              body: new FormData(form),
+              headers: {
+                'Accept': 'application/json'
+              }
+            });
+            
+            if (response.ok) {
+              showFlashMessage('Message sent successfully!', 'success');
+              form.reset();
+            } else {
+              throw new Error('Form submission failed');
+            }
+          } catch (error) {
+            showFlashMessage('Error sending message. Please try again or contact us directly by email.', 'error');
+          } finally {
+            if (submitButton) {
+              submitButton.disabled = false;
+              submitButton.textContent = 'Siųsti';
+            }
+            form.removeChild(captchaInput);
+            form.removeChild(honeypot);
+          }
+        });
+
+        function showFlashMessage(message: string, type: 'success' | 'error') {
+          const flashMessage = document.createElement('div');
+          flashMessage.className = `flash-message ${type}`;
+          flashMessage.textContent = message;
+          
+          // Position the message above the form
+          const formRect = form?.getBoundingClientRect();
+          if (formRect) {
+            flashMessage.style.position = 'fixed';
+            flashMessage.style.top = `${formRect.top + window.scrollY - 40}px`;
+            flashMessage.style.left = '28%';
+            flashMessage.style.transform = 'translateX(-50%)';
+            flashMessage.style.zIndex = '1000';
+            flashMessage.style.padding = '15px 30px';
+            flashMessage.style.borderRadius = '4px';
+            flashMessage.style.textAlign = 'center';
+            flashMessage.style.color = 'white';
+            flashMessage.style.fontWeight = 'bold';
+            flashMessage.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            flashMessage.style.animation = 'fadeIn 0.3s ease-in';
+            flashMessage.style.maxWidth = '80%';
+            
+            if (type === 'success') {
+              flashMessage.style.backgroundColor = '#4CAF50'; // Green
+            } else {
+              flashMessage.style.backgroundColor = '#F44336'; // Red
+            }
+            
+            document.body.appendChild(flashMessage);
+            
+            // Remove message after 1.5 seconds
+            setTimeout(() => {
+              flashMessage.style.opacity = '0';
+              flashMessage.style.transition = 'opacity 0.3s ease-out';
+              setTimeout(() => {
+                if (document.body.contains(flashMessage)) {
+                  document.body.removeChild(flashMessage);
+                }
+              }, 300);
+            }, 1500);
+          }
+        }
+      });
+    </script>
   </head>
   <body>
     <LayoutEn>
@@ -26,16 +125,16 @@ import favicon from "../../assets/favicon.png"
             <div class="b-block form-container">
               <form
                 class="form"
-                method="post"
-                id="contact-form"
+                action="https://formsubmit.co/benastenas9@gmail.com"
+                method="POST"
               >
             
                 <label for="name">Name</label>
-                <input type="text" name="name" placeholder="Name" required />
+                <input type="text" name="Name" placeholder="Name" required />
                 <label for="email">Email</label>
                 <input
                   type="email"
-                  name="email"
+                  name="Email"
                   placeholder="Email"
                   required
                 />
@@ -46,7 +145,7 @@ import favicon from "../../assets/favicon.png"
                   placeholder="Your message"
                   required></textarea>
                 <label for="reason">Subject</label>
-                <select name="reason" required>
+                <select name="Reason" required>
                   <option value="">Select...</option>
                   <option value="Sponsorship">Partnership</option>
                   <option value="Recruitment">Membership</option>
@@ -54,10 +153,7 @@ import favicon from "../../assets/favicon.png"
                 </select>
 
                 <button type="submit" class="w-block">Send</button>
-              </form>
-              <div id="success-alert" class="success-alert" style="display: none;">
-                Thank you! Your message has been sent successfully.
-              </div>              
+              </form>          
             </div>
           </div>
           <div class="info">
@@ -109,45 +205,4 @@ import favicon from "../../assets/favicon.png"
       </div>
     </LayoutEn>
   </body>
-  
-  <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("contact-form") as HTMLFormElement | null;
-  const alertBox = document.getElementById("success-alert") as HTMLElement | null;
-
-  if (form && alertBox) {
-    form.addEventListener("submit", (e: Event) => {
-      e.preventDefault();
-
-      const formData = new FormData(form);
-      const formEntries = Array.from(formData.entries()).map(([key, value]) => [
-        key,
-        typeof value === "string" ? value : value.name,
-      ]);
-
-      const encoded = new URLSearchParams(formEntries as [string, string][]).toString();
-
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encoded,
-      })
-        .then(() => {
-          alertBox.style.display = "block";
-          alertBox.style.opacity = "1";
-          form.reset();
-
-          setTimeout(() => {
-            alertBox.style.opacity = "0";
-            setTimeout(() => {
-              alertBox.style.display = "none";
-            }, 300); // extra delay to allow fade out
-          }, 800); // 0.5 second display
-        })
-        .catch(() => alert("Oops! Something went wrong."));
-    });
-  }
-});
-
-  </script>
 </html>

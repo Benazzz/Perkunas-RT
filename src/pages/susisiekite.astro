@@ -16,6 +16,105 @@ import favicon from "../assets/favicon.png"
     <meta name="format-detection" content="email=no">
     <link rel="icon" type="image/png" href={favicon.src}> 
     <title>Perkūnas RT | Susisiekite</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('.form') as HTMLFormElement | null;
+        if (!form) return;
+
+        form.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          
+          // Create a hidden input for FormSubmit's captcha
+          const captchaInput = document.createElement('input');
+          captchaInput.type = 'hidden';
+          captchaInput.name = '_captcha';
+          captchaInput.value = 'false';
+          form.appendChild(captchaInput);
+          
+          // Add a honeypot field (FormSubmit requires this for AJAX)
+          const honeypot = document.createElement('input');
+          honeypot.type = 'text';
+          honeypot.name = '_honey';
+          honeypot.style.display = 'none';
+          form.appendChild(honeypot);
+          
+          // Disable submit button during submission
+          const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+          if (!submitButton) return;
+          submitButton.disabled = true;
+          submitButton.textContent = 'Siunčiama...';
+          
+          try {
+            const response = await fetch(form.action, {
+              method: 'POST',
+              body: new FormData(form),
+              headers: {
+                'Accept': 'application/json'
+              }
+            });
+            
+            if (response.ok) {
+              showFlashMessage('Žinutė sėkmingai išsiųsta!', 'success');
+              form.reset();
+            } else {
+              throw new Error('Form submission failed');
+            }
+          } catch (error) {
+            showFlashMessage('Įvyko klaida siunčiant žinutę. Bandykite dar kartą arba susisiekite tiesiogiai el. paštu.', 'error');
+          } finally {
+            if (submitButton) {
+              submitButton.disabled = false;
+              submitButton.textContent = 'Siųsti';
+            }
+            form.removeChild(captchaInput);
+            form.removeChild(honeypot);
+          }
+        });
+
+        function showFlashMessage(message: string, type: 'success' | 'error') {
+          const flashMessage = document.createElement('div');
+          flashMessage.className = `flash-message ${type}`;
+          flashMessage.textContent = message;
+          
+          // Position the message above the form
+          const formRect = form?.getBoundingClientRect();
+          if (formRect) {
+            flashMessage.style.position = 'fixed';
+            flashMessage.style.top = `${formRect.top + window.scrollY - 40}px`;
+            flashMessage.style.left = '28%';
+            flashMessage.style.transform = 'translateX(-50%)';
+            flashMessage.style.zIndex = '1000';
+            flashMessage.style.padding = '15px 30px';
+            flashMessage.style.borderRadius = '4px';
+            flashMessage.style.textAlign = 'center';
+            flashMessage.style.color = 'white';
+            flashMessage.style.fontWeight = 'bold';
+            flashMessage.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            flashMessage.style.animation = 'fadeIn 0.3s ease-in';
+            flashMessage.style.maxWidth = '80%';
+            
+            if (type === 'success') {
+              flashMessage.style.backgroundColor = '#4CAF50'; // Green
+            } else {
+              flashMessage.style.backgroundColor = '#F44336'; // Red
+            }
+            
+            document.body.appendChild(flashMessage);
+            
+            // Remove message after 1.5 seconds
+            setTimeout(() => {
+              flashMessage.style.opacity = '0';
+              flashMessage.style.transition = 'opacity 0.3s ease-out';
+              setTimeout(() => {
+                if (document.body.contains(flashMessage)) {
+                  document.body.removeChild(flashMessage);
+                }
+              }, 300);
+            }, 1500);
+          }
+        }
+      });
+    </script>
   </head>
   <body>
     <LayoutLt>
@@ -28,16 +127,14 @@ import favicon from "../assets/favicon.png"
                 class="form"
                 action="https://formsubmit.co/benastenas9@gmail.com"
                 method="POST"
-                target="_blank"
               >
                 <label for="name">Vardas</label>
-                <input type="text" name="Name" id="name" placeholder="Vardas" required />
+                <input type="text" name="Name" placeholder="Vardas" required />
                 <label for="email">El. Paštas</label>
                 <input
                   type="email"
                   name="Email"
                   placeholder="El. Paštas"
-                  id="email"
                   required
                 />
                 <label for="message">Žinutė</label>
@@ -45,7 +142,6 @@ import favicon from "../assets/favicon.png"
                   name="Message"
                   rows="4"
                   placeholder="Jūsų žinutė"
-                  id="message"
                   required></textarea>
                 <label for="reason">Tema</label>
                 <select name="Reason" required id="reason">
