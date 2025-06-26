@@ -7,6 +7,7 @@ import linkedin from "../../assets/social_icons/linkedin.png";
 import tiktok from "../../assets/social_icons/tiktok.png";
 import facebook from "../../assets/social_icons/facebook.png";
 import favicon from "../../assets/favicon.png" 
+import Team from "../../assets/TeamFromDrone.png";
 ---
 
 <html lang="en">
@@ -14,8 +15,26 @@ import favicon from "../../assets/favicon.png"
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="format-detection" content="email=no">
+
     <link rel="icon" type="image/png" href={favicon.src}> 
     <title>Perkūnas RT | Contact us</title>
+    <meta
+    name="description"
+    content="Contact the Perkūnas RT team for partnership, membership, or general inquiries. We're a student team from Lithuania building a race car for the Formula Student competition."
+    />
+
+        <!-- Open Graph Tags -->
+    <link rel="alternate" hreflang="lt" href="https://perkunasrt.com/susisiekite" />
+    <link rel="alternate" hreflang="en" href="https://perkunasrt.com/en/contact-us" />
+    <link rel="canonical" href="https://perkunasrt.com/contact" />
+    <meta property="og:title" content="Contact Us | Perkūnas RT - Formula Student Team" />
+    <meta
+      property="og:description"
+      content="Get in touch with the Perkūnas RT team for partnerships, membership inquiries, or general questions."
+    />
+    <meta property="og:image" content={Team.src} />
+    <meta property="og:url" content="https://perkunasrt.com/contact" />
+    <meta property="og:type" content="website" />
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const form = document.querySelector('.form') as HTMLFormElement | null;

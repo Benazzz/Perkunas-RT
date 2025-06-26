@@ -4,14 +4,27 @@ import "../styles/style.css"
 import GPM from "../assets/gpm.png"
 import "../styles/support-us.css"
 import favicon from "../assets/favicon.png"
+import Team from "../assets/TeamFromDrone.png";
 ---
 <html lang="lt">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <meta name="format-detection" content="email=no">
+
         <link rel="icon" type="image/png" href={favicon.src}> 
         <title>Perkūnas RT | Paremkite</title>
+        <meta name="description" content="Paremkite Perkūnas RT lenktynių komandą skirdami 1.2% GPM arba aukodami per Gogetfunding ir Whydonate platformas. Jūsų parama mums labai svarbi!" />
+
+        <link rel="canonical" href="https://perkunasrt.com/paremkite" />
+        <link rel="alternate" hreflang="lt" href="https://perkunasrt.com/paremkite" />
+        <link rel="alternate" hreflang="en" href="https://perkunasrt.com/en/support-us" />
+        <!-- Open Graph -->
+        <meta property="og:title" content="Paremkite | Perkūnas RT - Studentų Formula Student komanda" />
+        <meta property="og:description" content="Paremkite Perkūnas RT studentų Formula Student komandą skirdami 1.2% GPM arba pervesdami paramą per mūsų platformas." />
+        <meta property="og:image" content={Team.src}>
+        <meta property="og:url" content="https://perkunasrt.com/paremkite" />
+        <meta property="og:type" content="website" />
     </head>
     <body>
         <LayoutLt>
@@ -19,7 +32,7 @@ import favicon from "../assets/favicon.png"
                 <div class="container card">
                     <div class="GPM">
                         <h1>Skirkite 1.2% GPM!</h1>
-                        <div class="first-p"><img src={GPM.src} alt="1.2% GPM"  class="image-b"></div>
+                        <div class="first-p"><img src={GPM.src} alt="Skirkite 1.2% GPM PerkunasRT komandai"  class="image-b"></div>
                     </div>
                     <div class="support">
                         <h1>Paremkite!</h1>

@@ -6,6 +6,8 @@ import CarInGarage from "../assets/CarInGarage.png";
 import Competition from "../assets/Competition.png";
 import "../styles/about-us.css";
 import favicon from "../assets/favicon.png"
+import Team from "../assets/TeamFromDrone.png";
+
 ---
 
 <html lang="lt">
@@ -13,8 +15,22 @@ import favicon from "../assets/favicon.png"
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="format-detection" content="email=no">
+
     <link rel="icon" type="image/png" href={favicon.src}> 
     <title>Perkūnas RT | Apie Mus</title>
+    <meta name="description" content="Susipažinkite su „Perkūnas RT“ - studentų „Formula Student“ komanda, kurianti lenktyninius automobilius ir ugdanti ateities inžinerijos bei verslo lyderius.">
+
+    <link rel="icon" href={favicon.src}>
+    <link rel="canonical" href="https://perkunasrt.com/apie-mus" />
+    <link rel="alternate" hreflang="lt" href="https://perkunasrt.com/apie-mus" />
+    <link rel="alternate" hreflang="en" href="https://perkunasrt.com/en/about-us" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Apie Mus | Perkūnas RT - Studentų „Formula Student“ Komanda">
+    <meta property="og:description" content="Susipažinkite su „Perkūnas RT“ - studentų „Formula Student“ komanda, kurianti lenktyninius automobilius ir ugdanti ateities inžinerijos bei verslo lyderius.">
+    <meta property="og:image" content={Team.src}>
+    <meta property="og:url" content="https://perkunasrt.com/apie-mus">
+    <meta property="og:type" content="website">
   </head>
   <body>
     <LayoutLt>
@@ -45,7 +61,7 @@ import favicon from "../assets/favicon.png"
           <div class="image">
             <img
               src={CarInSun.src}
-              alt="Automobilis saulėje"
+              alt="Perkūnas RT automobilis saulėje"
               width="400px"
               class="image-b"
             />
@@ -58,7 +74,7 @@ import favicon from "../assets/favicon.png"
           <div class="image">
             <img
               src={CarInGarage.src}
-              alt="Automobilis garaže"
+              alt="Perkūnas RT automobilis garaže"
               width="400px"
               class="image-y"
             />
@@ -106,7 +122,7 @@ import favicon from "../assets/favicon.png"
           <div class="image">
             <img
               src={Competition.src}
-              alt="Formulės varžyvbos"
+              alt="Formula Student varžybos"
               width="400px"
               class="image-b"
             />

@@ -4,6 +4,7 @@ import "../styles/style.css";
 import "../styles/join-us.css";
 import Team from "../assets/Team.png";
 import favicon from "../assets/favicon.png"
+import TeamDrone from "../assets/TeamFromDrone.png";
 ---
 
 <html lang="lt">
@@ -11,8 +12,22 @@ import favicon from "../assets/favicon.png"
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="format-detection" content="email=no">
+
     <link rel="icon" type="image/png" href={favicon.src}> 
     <title>Perkūnas RT | Prisijunkite</title>
+    <meta name="description" content="Norite prisijungti prie Perkūnas RT komandos? Sužinokite, kokią patirtį įgysite prisijungę prie mūsų studentų Formula Student projekto." />
+
+    <link rel="canonical" href="https://perkunasrt.com/prisijunkite" />
+    <link rel="alternate" hreflang="lt" href="https://perkunasrt.com/prisijunkite" />
+    <link rel="alternate" hreflang="en" href="https://perkunasrt.com/en/join-us" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Perkūnas RT | Prisijunkite" />
+    <meta property="og:description" content="Prisijunkite prie mūsų komandos ir įgykite praktinės patirties inžinerijos, verslo bei „Formula Student“ projektuose." />
+        <meta property="og:image" content={TeamDrone.src}>
+    <meta property="og:url" content="https://perkunasrt.com/prisijunkite" />
+    <meta property="og:type" content="website" />
+
   </head>
   <body>
     <LayoutLt>
@@ -31,7 +46,7 @@ import favicon from "../assets/favicon.png"
               <a class="button b-block" href="https://docs.google.com/forms/d/e/1FAIpQLSdwLiYJsdeDij5YE5FDXWvOn8sIecHKf9AITatkuBPsYKg6zQ/viewform" target="_blank">PRISIJUNGTI</a>
             </div>
             <div>
-                <img src={Team.src} alt="Komanda" width="100%" class="image-b">
+                <img src={Team.src} alt="Perkunas RT komanda" width="100%" class="image-b">
             </div>
           </div>
           <div class="join-info">

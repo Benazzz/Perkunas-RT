@@ -4,6 +4,7 @@ import "../../styles/style.css";
 import "../../styles/join-us.css";
 import Team from "../../assets/Team.png";
 import favicon from "../../assets/favicon.png" 
+import TeamDrone from "../../assets/TeamFromDrone.png";
 ---
 
 <html lang="en">
@@ -11,8 +12,26 @@ import favicon from "../../assets/favicon.png"
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="format-detection" content="email=no">
+
     <link rel="icon" type="image/png" href={favicon.src}> 
     <title>Perkūnas RT | Join us</title>
+    <meta
+    name="description"
+    content="Join Perkūnas RT and gain practical experience in engineering, design, business, and teamwork. Build the future of racing with Lithuania’s student team."
+    />
+
+        <!-- Open Graph Tags -->
+    <link rel="alternate" hreflang="lt" href="https://perkunasrt.com/prisijunkite" />
+    <link rel="alternate" hreflang="en" href="https://perkunasrt.com/en/join-us" />
+    <link rel="canonical" href="https://perkunasrt.com/join" />
+    <meta property="og:title" content="Join Us | Perkūnas RT - Build the Future of Racing" />
+    <meta
+      property="og:description"
+      content="Are you passionate about engineering, design, or business? Join Perkūnas RT, a student team building a race car for the Formula Student competition."
+    />
+    <meta property="og:image" content={TeamDrone.src} />
+    <meta property="og:url" content="https://perkunasrt.com/join" />
+    <meta property="og:type" content="website" />
   </head>
   <body>
     <LayoutEn>
@@ -29,7 +48,7 @@ import favicon from "../../assets/favicon.png"
               <a class="button b-block" href="https://docs.google.com/forms/d/e/1FAIpQLSdwLiYJsdeDij5YE5FDXWvOn8sIecHKf9AITatkuBPsYKg6zQ/viewform" target="_blank">JOIN</a>
             </div>
             <div>
-                <img src={Team.src} alt="Team" width="100%" class="image-b">
+                <img src={Team.src} alt="PerkunasRT team" width="100%" class="image-b">
             </div>
           </div>
           <div class="join-info">

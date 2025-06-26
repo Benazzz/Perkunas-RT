@@ -6,6 +6,7 @@ import CarInGarage from "../../assets/CarInGarage.png";
 import Competition from "../../assets/Competition.png";
 import "../../styles/about-us.css";
 import favicon from "../../assets/favicon.png" 
+import Team from "../../assets/TeamFromDrone.png";
 ---
 
 <html lang="en">
@@ -13,8 +14,27 @@ import favicon from "../../assets/favicon.png"
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="format-detection" content="email=no">
+
     <link rel="icon" type="image/png" href={favicon.src}> 
     <title>Perkūnas RT | About Us</title>
+     <meta
+    name="description"
+    content="We are an ambitious student team from Lithuania, creating a race car for the Formula Student competition. We build future leaders by combining engineering, business, and project management."
+    />
+
+    
+    <!-- Open Graph Tags -->
+    <link rel="alternate" hreflang="lt" href="https://perkunasrt.com/apie-mus" />
+    <link rel="alternate" hreflang="en" href="https://perkunasrt.com/en/about-us" />
+    <link rel="canonical" href="https://perkunasrt.com/about" />
+    <meta property="og:title" content="About Us | Perkūnas RT - Formula Student Team" />
+    <meta
+      property="og:description"
+      content="An ambitious student team from Lithuania, creating a race car for the Formula Student competition and developing future leaders."
+    />
+    <meta property="og:image" content={Team.src} />
+    <meta property="og:url" content="https://perkunasrt.com/about" />
+    <meta property="og:type" content="website" />
   </head>
   <body>
     <LayoutEn>
@@ -39,7 +59,7 @@ import favicon from "../../assets/favicon.png"
           <div class="image">
             <img
               src={CarInSun.src}
-              alt="Car in sun"
+              alt="PerkunasRT car in sun"
               width="400px"
               class="image-b"
             />
@@ -52,7 +72,7 @@ import favicon from "../../assets/favicon.png"
           <div class="image">
             <img
               src={CarInGarage.src}
-              alt="Car in garage"
+              alt="PerkunasRT car in garage"
               width="400px"
               class="image-y"
             />
