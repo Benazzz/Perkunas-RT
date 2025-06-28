@@ -10,6 +10,7 @@ import Benas_M from "../../assets/Leads/Benas_M.png"
 import Deivid from "../../assets/Leads/Deivid.png"
 import Vytaute from "../../assets/Leads/Vytaute.png"
 import Ugnius from "../../assets/Leads/Ugnius.png"
+import Ervinas from "../../assets/Leads/Ervinas.png"
 import TeamDrone from "../../assets/TeamFromDrone.png";
 ---
 <html lang="en">
@@ -34,7 +35,7 @@ import TeamDrone from "../../assets/TeamFromDrone.png";
             property="og:description"
             content="Get to know the talented team behind Perkūnas RT. Our engineers, designers, and entrepreneurs collaborate to build a race car and redefine engineering excellence."
         />
-        <meta property="og:image" content="https://perkunasrt.com/_astro/TeamFromDrone.png" />
+        <meta property="og:image" content={TeamDrone.src} />
         <meta property="og:url" content="https://perkunasrt.com/team" />
         <meta property="og:type" content="website" />
     </head>
@@ -127,7 +128,7 @@ import TeamDrone from "../../assets/TeamFromDrone.png";
                           
                     </div>
                     <div class="lead">
-                        <img src={NoPicture.src} alt="Ervinas Rimkevičius" width="300px" class="image">
+                        <img src={Ervinas.src} alt="Ervinas Rimkevičius" width="300px" class="image">
                         <p class="name first-p">Ervinas Rimkevičius</p>
                         <p class="role">Lead Engineer</p>
                         <div class="contacts">
